@@ -1,4 +1,4 @@
-/** global element styling **/
+
 
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
@@ -6,6 +6,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://www.teahub.io/photos/full/260-2602375_traxxas-slash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 body {
@@ -26,7 +45,7 @@ a {
   text-decoration: none;
 }
 
-/** global classes styling **/
+
 
 .container {
   max-width: 1000px;
